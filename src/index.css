@@ -24,8 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+       /* center vertical */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +64,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+
+  .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  width: 400px; /* biar rapi */
+}
 }
