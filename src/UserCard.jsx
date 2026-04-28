@@ -13,7 +13,7 @@ function UserCard({ id, userId, title, body }) {
         {title}
       </h2>
 
-      <p className="text-gray-600 mb-4">
+      <p className="text-gray-600 mb-4 text-center">
         {body}
       </p>
 
