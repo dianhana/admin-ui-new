@@ -4,7 +4,8 @@ function UserCard({ id, userId, title, body }) {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow max-w-sm w-full mx-auto transition-all duration-300 
+    <div className="bg-white p-6 rounded-lg shadow w-full
+                    transition-all duration-300 
                     hover:scale-105 hover:border hover:bg-red-100 
                     flex flex-col">
       
