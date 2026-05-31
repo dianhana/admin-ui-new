@@ -6,7 +6,7 @@ import CardUpcomingBill from "./CardUpcomingBill";
 import CardRecentTransaction from "./CardRecentTransaction";
 import CardStatistic from "./CardStatistic";
 import CardExpenseBreakdown from "./CardExpenseBreakdown";
-import { transactions, bills, expensesBreakdowns } from "../data";
+import { transactions, bills, expensesBreakdowns, balances, goals, expensesStatistics } from "../data";
 
 
 function Dashboard() {
@@ -18,12 +18,12 @@ console.log(transactions);
 
         {/* Total Balance */}
         <div className="sm:col-span-4 ">
-          <CardBalance />
+          <CardBalance data={balances} />
         </div>
 
         {/* Goals */}
         <div className="sm:col-span-4">
-          <CardGoal />
+          <CardGoal data={goals} />
         </div>
 
         {/* Upcoming Bill */}
@@ -38,7 +38,7 @@ console.log(transactions);
 
         {/* Statistics */}
         <div className="sm:col-span-8">
-          <CardStatistic data={expensesBreakdowns} />
+          <CardStatistic data={expensesStatistics} />
         </div>
 
         {/* Expenses Breakdown */}
