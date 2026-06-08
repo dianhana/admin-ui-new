@@ -241,7 +241,7 @@ export const balances = [
     accountType: "Credit Card",
     accountNumber: "3388 4556 8860 80000",
     balance: 25000,
-    logo: null,
+    logo: <Icon.Mastercard width={40} /> ,
   },
   {
     id: 2,
@@ -250,7 +250,7 @@ export const balances = [
     accountType: "Checking",
     accountNumber: "693 456 69 90000",
     balance: 25000,
-    logo: null,
+    logo: <Icon.Visa width={40} /> ,
   },
   {
     id: 3,
