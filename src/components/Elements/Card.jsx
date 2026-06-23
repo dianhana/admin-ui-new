@@ -1,24 +1,16 @@
-import React from "react";
+import React from "react"; 
 
 function Card(props) {
-  const { title, desc, link, children } = props;
+  const { title, link = false, desc } = props;
 
   return (
     <div className="h-full flex flex-col">
-      <div className="flex justify-between items-center mb-2">
-        <h3 className="text-gray-700 text-2xl">{title}</h3>
-
-        {link && (
-          <span className="text-xs text-gray-500">
-            View All
-          </span>
-        )}
+      <div className="flex justify-between items-center text-gray-02 mb-2">
+        <div className="text-2xl">{title}</div> 
+        {link && <div className="text-xs">View All</div>}
       </div>
-
-      <div className="flex-1 bg-white rounded-lg px-6 py-4 shadow-md min-h-[150px]">
+      <div className="flex-1 bg-white rounded-lg px-6 py-5 shadow-xl">
         {desc}
-
-        {children}
       </div>
     </div>
   );

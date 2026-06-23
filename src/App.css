@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   font-size: 75%;
@@ -6,10 +6,9 @@ html {
 
 @import "tailwindcss";
 
-:root {
+@theme {
   --font-body: "Inter", sans-serif;
   --font-poppins: "Montserrat", sans-serif;
-
   --color-primary: #299d91;
   --color-secondary: #525256;
   --color-defaultBlack: #191919;
@@ -45,19 +44,4 @@ html {
 
 .theme-brown {
   --color-primary: #8b4513;
-}
-
-@layer utilities {
-.bg-special-green {
-  background-color: var(--color-special-green) !important;
-}
-.bg-gray-01 {
-  background-color: var(--color-gray-01) !important;
-}
-.bg-special-red2 {
-    background-color: var(--color-special-red2);
-  }
-
-  
-
 }

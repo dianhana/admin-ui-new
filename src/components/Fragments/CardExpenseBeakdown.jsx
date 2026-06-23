@@ -1,6 +1,6 @@
-import React from 'react';
-import Card from "../components/Elements/Card";
-import Icon from "../components/Elements/Icon";
+import React from "react";
+import Card from "../Elements/Card";
+import Icon from "../Elements/Icon";
 
 function CardExpenseBreakdown(props) {
   const { data } = props;
@@ -9,7 +9,7 @@ function CardExpenseBreakdown(props) {
     <>
       <Card
         title="Expenses Breakdown"
-        				desc={
+		desc={
           <div className="h-full md:grid md:grid-cols-3 gap-4">
             {data.map((item) => (
               <div key={item.id} className="flex items-center justify-between">

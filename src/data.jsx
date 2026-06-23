@@ -1,8 +1,4 @@
 import Icon from "./components/Elements/Icon";
-console.log("ICON:", Icon);
-console.log("Mastercard =", Icon.Mastercard);
-console.log("Visa =", Icon.Visa);
-
 
 export const bills = [
   {
@@ -37,11 +33,10 @@ export const expensesBreakdowns = [
     percentage: 15,
     icon: <Icon.House />,
     arrow: (
-    <div className="text-special-red">
-        <Icon.ArrowUp size={16} />
-    </div>
+      <div className="text-special-red">
+        <Icon.ArrowDown size={16} />
+      </div>
     ),
-    arrow: <Icon.ArrowUp />,
   },
   {
     id: 2,
@@ -50,11 +45,10 @@ export const expensesBreakdowns = [
     percentage: 8,
     icon: <Icon.Food />,
     arrow: (
-    <div className="text-special-green">
+      <div className="text-special-green">
         <Icon.ArrowDown size={16} />
-    </div>
+      </div>
     ),
-    arrow: <Icon.ArrowDown />,
   },
   {
     id: 3,
@@ -141,7 +135,6 @@ export const expensesStatistics = {
     },
   ],
 };
-
 export const transactions = [
   {
     id: 1,
@@ -241,7 +234,7 @@ export const balances = [
     accountType: "Credit Card",
     accountNumber: "3388 4556 8860 80000",
     balance: 25000,
-    logo: <Icon.Mastercard width={40} /> ,
+    logo: <Icon.Mastercard width={40} />,
   },
   {
     id: 2,
@@ -250,7 +243,7 @@ export const balances = [
     accountType: "Checking",
     accountNumber: "693 456 69 90000",
     balance: 25000,
-    logo: <Icon.Visa width={40} /> ,
+    logo: <Icon.Visa width={40} />,
   },
   {
     id: 3,

@@ -1,23 +1,22 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React from "react";
 import LabeledInput from "../Elements/LabeledInput";
 import Button from "../Elements/Button";
-
+import { Link } from "react-router-dom";
 
 function FormSignUp() {
   return (
     <>
+      {/* form start */}
       <div className="mt-10">
         <form action="">
-
-          {/* Full Name */}
+          {/* Name */}
           <div className="mb-6">
             <LabeledInput
-              label="Full Name"
-              id="fullname"
+              label="Name"
+              id="name"
               type="text"
-              placeholder="dian"
-              name="fullname"
+              placeholder="Tanzir Rahman"
+              name="name"
             />
           </div>
 
@@ -38,46 +37,38 @@ function FormSignUp() {
               label="Password"
               id="password"
               type="password"
-              placeholder="************"
+              placeholder="********"
               name="password"
             />
           </div>
 
-          {/* Confirm Password */}
-          <div className="mb-6">
-            <LabeledInput
-              label="Confirm Password"
-              id="confirmPassword"
-              type="password"
-              placeholder="************"
-              name="confirmPassword"
-            />
-          </div>
+          {/* Terms */}
+          <p className="text-xs text-gray-400 mb-6">
+            By continuing, you agree to our{" "}
+            <span className="text-primary cursor-pointer">
+              terms of service
+            </span>
+            .
+          </p>
 
-          {/* Button Register */}
-          <div className="mb-6">
-            <Button type="submit">
-              Register
-            </Button>
-          </div>
-
+          {/* Button */}
+          <Button>Sign up</Button>
         </form>
       </div>
+      {/* form end */}
 
       {/* Divider */}
-      <div className="my-9 relative flex justify-center items-center">
-        <div className="border border-gray-300 w-full"></div>
-
-        <div className="px-2 bg-white absolute text-xs text-gray-500">
+      <div className="my-9 px-7 flex flex-col justify-center items-center text-xs text-gray-400">
+        <div className="border border-gray-200 w-full"></div>
+        <div className="px-2 bg-special-mainBg absolute">
           or sign up with
         </div>
       </div>
 
-      {/* Google Button */}
+      {/* Google button */}
       <div className="mb-8">
         <Button type="button" variant="secondary">
           <span className="flex items-center justify-center">
-            
             <svg
               className="h-6 w-6 mr-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +83,7 @@ function FormSignUp() {
                 fill="#EB4335"
               />
               <path
-                d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4314667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
+                d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
                 fill="#34A853"
               />
               <path
@@ -100,20 +91,17 @@ function FormSignUp() {
                 fill="#4285F4"
               />
             </svg>
-
             Continue with Google
           </span>
         </Button>
       </div>
 
-      {/* Link Login */}
-      <div className="flex justify-center">
-        <p className="text-sm text-gray-600">
-          Already have an account?{" "}
-          <Link to = "/login" className="text-teal-500 font-bold">
-            Sign In Here
-          </Link>
-        </p>
+      {/* Link */}
+      <div className="flex justify-center text-sm text-gray-400">
+        Already have an account?
+        <Link to="/login" className="ml-1 text-primary font-bold cursor-pointer">
+          Sign in here
+        </Link>
       </div>
     </>
   );
