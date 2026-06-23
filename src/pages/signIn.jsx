@@ -6,7 +6,7 @@ import { AuthContext } from "../context/authContext";
 import AppSnackbar from "../components/Elements/AppSnackbar";
 
 
-function SignIn() {
+function signIn() {
   const { login } = useContext(AuthContext);
 
   	const [snackbar, setSnackbar] = useState({
