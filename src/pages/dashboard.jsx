@@ -15,6 +15,7 @@ import AppSnackbar from '../components/Elements/AppSnackbar';
 
 function dashboard() {
 	const [goals, setGoals] = useState({});
+  const [bills, setBills] = useState(null);
   const { logout } = useContext(AuthContext);
 
   const [snackbar, setSnackbar] = useState({
@@ -43,11 +44,27 @@ function dashboard() {
     }
   };
 
+  const fetchBills = async () => {
+    try {
+      const data = await billsService();
+      setBills(data);
+    } catch (err) {
+      setSnackbar({
+        open: true,
+        message: "Gagal mengambil data upcoming bill",
+        severity: "error",
+      });
+      if (err.status === 401) {
+        logout();
+      }
+    }
+  };
+
   useEffect(() => {
     fetchGoals();
+    fetchBills();
   }, []);
   
-  console.log(goals);
   return (
     <>
         <MainLayout>
