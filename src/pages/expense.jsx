@@ -19,21 +19,27 @@ function expense() {
     setSnackbar((prev) => ({ ...prev, open: false }));
   };
 
-  const fetchExpenses = async () => {
-    try {
-      const data = await expensesService();
-      setExpenses(data);
-    } catch (err) {
-      setSnackbar({
-        open: true,
-        message: "Gagal mengambil data expenses",
-        severity: "error",
-      });
-      if (err.status === 401) {
-        logout();
-      }
+const fetchExpenses = async () => {
+  try {
+    const data = await expensesService();
+
+    console.log("Expenses :", data);
+
+    setExpenses(data);
+  } catch (err) {
+    console.log(err);
+
+    setSnackbar({
+      open: true,
+      message: "Gagal mengambil data expenses",
+      severity: "error",
+    });
+
+    if (err.status === 401) {
+      logout();
     }
-  };
+  }
+};
 
   useEffect(() => {
     fetchExpenses();

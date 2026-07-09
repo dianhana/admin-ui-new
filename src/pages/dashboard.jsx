@@ -11,6 +11,7 @@ import { transactions, bills, expensesBreakdowns, balances, goals, expensesStati
 import { goalService } from '../services/dataService';
 import { AuthContext } from '../context/authContext';
 import AppSnackbar from '../components/Elements/AppSnackbar';
+import { billsService } from "../services/dataService";
 
 
 function dashboard() {
